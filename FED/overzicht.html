@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		<title>overzicht</title>
+	</head>
+	<body>
+		
+		<nav >
+			<a href="overzicht.html">
+				<img src="styles/logo3dfds.png" alt="DFDS logo">
+				<img src="styles/logo3reisverhalen.png" alt="DFDS logo">
+				<!--<h1>reisverhalen</h1>-->
+			</a>
+			<div role="toolbar">
+				<ul>
+					<li>
+						<a href="">Collectie</a>
+						<img src="styles/boekenkasticoon.png"></li>
+					<li><a href="">Meldingen</a><img src="styles/meldingenicoon.png"></li>
+					<li><a href="">Profiel</a><img src="styles/profielicoon.png"></li>
+					<li><button id="randombutton">Donker thema</button></li>
+				</ul>
+				<!--
+				<button>Collectie
+				<img src="styles/boekenkasticoon.png">
+				</button>
+				<button>Meldingen
+				<img src="styles/meldingenicoon.png">
+				</button>
+				<button>Profiel
+				<img src="styles/profielicoon.png">
+				</button>-->
+			</div>
+			<button id="menuicoon">
+			<img title="menu" src="styles/menuicoon.png">
+			</button>
+		</nav>
+		
+		
+		<main>
+			<section id="populair">
+				<h2>Populair deze week</h2>
+				<ol>
+					<li>
+						<a href="">Vrijdag de 13e</a>
+						<button>+</button>
+					</li>
+					<li>
+						<a>Onomatopee</a>
+						<button>+</button>
+					</li>
+					<li>
+						<a>Stoned</a>
+						<button>+</button>
+					</li>
+					<li>
+						<a>Beroemd</a>
+						<button>+</button>
+					</li>
+					<li>
+						<a>Freudiaans</a>
+						<button>+</button>
+					</li>
+					<li>
+						<a>Steenkolenfrans</a>
+						<button>+</button>
+					</li>
+					<li>
+						<a>Martin Bril</a>
+						<button>+</button>
+					</li>
+					<li>
+						<a>Het gebrek</a>
+						<button>+</button>
+					</li>
+					<li>
+						<a>Zoon</a>
+						<button>+</button>
+					</li>
+					<li>
+						<a>Vergezocht</a>
+						<button>+</button>
+					</li>	
+				</ol>
+	</section>
+	<section class="uitgelicht" >
+		<h2>Uitgelicht verhaal</h2>
+		<!--<img src="styles/geert-wilders.png">-->
+		<div id="uitgelichtcontainer">
+			<button id="pijltjerechts" class="pijlbutton">></button>
+			<button id="pijltjelinks" class="pijlbutton"><</button>
+			<article class="uitgelichtverhaal">
+
+				<header id="uitgelichtheader" >
+					<h3 >Anima </h3>
+					<button id="uitgelichtplusje">+</button>
+				</header>
+				<p>Ik wordt uit de bus gerold. Mijn wielen rollen over de nat geworden stenen van het stationsplein. Ik wordt voortgeduwd door een homp bleek vlees[…] </p>
+				<a href="anima.html">
+					<button id="uitgelichtverderlezen">Lees verder >
+					</button>
+				</a>
+			</article>
+		</div>
+	</section>
+	
+	<!--het gedeelte onder het carrousel-->
+	<div id="vindverhaal">
+		<h2>Vind een verhaal</h2>
+		<div id="zoekwrapper">
+			<input type="text" id="zoekbalk" placeholder="Zoek een verhaal">
+			<img id="zoekicoon" src="styles/zoekicoon.png">
+		</div>
+	</div>
+	<form>
+		<!--de filter- en sorteeropties-->
+		<select>
+			<option value="categorie">categorie</option>
+			<option value="humor">humor</option>
+			<option value="dramatisch">dramatisch</option>
+		</select>
+		<select>
+			<option value="kenmerk">kenmerk</option>
+			<option value="Gelezen">Gelezen (1)</option>
+			<option value="Ongelezen">Ongelezen (2)</option>
+		</select>
+		<select>
+			<option value="categorie">volgorde</option>
+			<option value="A-Z">A-Z</option>
+			<option value="Z-A">Z-A</option>
+			<option value="hoog-laag">hoog-laag</option>
+		</select>
+	</form>
+	<h5 id="hoeveelresultaten">99 resultaten</h5>
+	
+	<div id="resultaten">
+		<article>
+			<!--dit is een van de verhalen in de lijst-->
+			<header id="animaheading">
+				<h3>Anima</h3>
+				<button>+</button>
+			</header>
+			<p>20 <img alt="klok-icoontje" src="styles/tijdicoontwee.png">2 <img alt="reacties-icoontje" src="styles/reactiesicoon.png">5/5 <img alt="ster-icoontje" src="styles/stericoon.png"></p>
+			<p>
+				Ik wordt uit de bus gerold. Mijn wielen rollen over de nat geworden stenen van het stationsplein. Ik wordt voortgeduwd door een homp bleek vlees. In mij ligt een kleiner hompje vlees, het product van eerder genoemde grotere homp vlees. Dit kleine hompje vlees weegt een kilootje of tien en ligt rustig te slapen. Een […]
+			</p>
+			
+			<a href="anima.html">
+				<button >Lees verder >
+				</button>
+			</a>
+		</article>
+		
+		<article>
+			<!--dit is een van de verhalen in de lijst-->
+			<header id="onomatopeeheading">
+				<h3>Onomatopee</h3>
+				<button>+</button>
+			</header>
+			<p>20 <img alt="klok-icoontje" src="styles/tijdicoontwee.png">2 <img alt="reacties-icoontje" src="styles/reactiesicoon.png">5/5 <img alt="ster-icoontje" src="styles/stericoon.png"></p>
+			<p>
+				De ronk-ronk-bus komt met piiieeepende remmen tot stilstand en opent sssslissend en sssissend haar deuren. Ik stap-stap-stap uit de bus en push oef-oef de kinderwagen voort waarvan de rrrollende wielen mijn zzzlapende zoontje dragen. Sloffende mensen staren naar de grond, zingende tramkabels zwiepen tegen een grauwgrijze hemel. De woeiwoeiwind zorgt ervoor dat de regen in […]
+			</p>
+			
+			<a href="onomatopee.html">
+				<button>Lees verder >
+				</button>
+			</a>
+			
+		</article>
+		
+		<article>
+			<!--dit is een van de verhalen in de lijst-->
+			<header id="vrijdagdedertiendeheader">
+				<h3>Vrijdag de 13e</h3>
+				<button>+</button>
+			</header>
+			<p>20 <img alt="klok-icoontje" src="styles/tijdicoontwee.png">2 <img alt="reacties-icoontje" src="styles/reactiesicoon.png">5/5 <img alt="ster-icoontje" src="styles/stericoon.png"></p>
+			<p>
+				Bij het uitstappen van de bus waait mijn jas open, precies op het moment dat de buschauffeur de deuren sluit. Terwijl ik de kinderwagen waarin mijn zoon ligt te krijsen vasthoudt, ren ik mee met de bus en schreeuw ik naar de buschauffeur dat hij moet stoppen. Maar hij hoort me niet, de bus draait […]
+			</p>
+			
+			<a href="vrijdagdedertiende.html">
+				<button>Lees verder >
+				</button>
+			</a>
+			
+		</article>
+		<article>
+			<!--dit is een van de verhalen in de lijst-->
+			<header id="animaheading">
+				<h3>Anima</h3>
+				<button>+</button>
+			</header>
+			<p>20 <img alt="klok-icoontje" src="styles/tijdicoontwee.png">2 <img alt="reacties-icoontje" src="styles/reactiesicoon.png">5/5 <img alt="ster-icoontje" src="styles/stericoon.png"></p>
+			<p>
+				Ik wordt uit de bus gerold. Mijn wielen rollen over de nat geworden stenen van het stationsplein. Ik wordt voortgeduwd door een homp bleek vlees. In mij ligt een kleiner hompje vlees, het product van eerder genoemde grotere homp vlees. Dit kleine hompje vlees weegt een kilootje of tien en ligt rustig te slapen. Een […]
+			</p>
+			
+			<a href="anima.html">
+				<button >Lees verder >
+				</button>
+			</a>
+		</article>
+		
+		<article>
+			<!--dit is een van de verhalen in de lijst-->
+			<header id="onomatopeeheading">
+				<h3>Onomatopee</h3>
+				<button>+</button>
+			</header>
+			<p>20 <img alt="klok-icoontje" src="styles/tijdicoontwee.png">2 <img alt="reacties-icoontje" src="styles/reactiesicoon.png">5/5 <img alt="ster-icoontje" src="styles/stericoon.png"></p>
+			<p>
+				De ronk-ronk-bus komt met piiieeepende remmen tot stilstand en opent sssslissend en sssissend haar deuren. Ik stap-stap-stap uit de bus en push oef-oef de kinderwagen voort waarvan de rrrollende wielen mijn zzzlapende zoontje dragen. Sloffende mensen staren naar de grond, zingende tramkabels zwiepen tegen een grauwgrijze hemel. De woeiwoeiwind zorgt ervoor dat de regen in […]
+			</p>
+			
+			<a href="onomatopee.html">
+				<button>Lees verder >
+				</button>
+			</a>
+			
+		</article>
+		
+		<article>
+			<!--dit is een van de verhalen in de lijst-->
+			<header id="vrijdagdedertiendeheader">
+				<h3>Vrijdag de 13e</h3>
+				<button>+</button>
+			</header>
+			<p>20 <img alt="klok-icoontje" src="styles/tijdicoontwee.png">2 <img alt="reacties-icoontje" src="styles/reactiesicoon.png">5/5 <img alt="ster-icoontje" src="styles/stericoon.png"></p>
+			<p>
+				Bij het uitstappen van de bus waait mijn jas open, precies op het moment dat de buschauffeur de deuren sluit. Terwijl ik de kinderwagen waarin mijn zoon ligt te krijsen vasthoudt, ren ik mee met de bus en schreeuw ik naar de buschauffeur dat hij moet stoppen. Maar hij hoort me niet, de bus draait […]
+			</p>
+			
+			<a href="vrijdagdedertiende.html">
+				<button>Lees verder >
+				</button>
+			</a>
+			
+		</article>
+
+	</div>
+</main>
+<footer>
+	<h4>Links</h4>
+	<ul>
+		<li><a>Over</a></li>
+		<li><a>DFDS website</a></li>
+	</ul>
+	<p>
+        DISCLAIMER: DEZE WEBSITE IS GEEN EIGENDOM VAN DFDS. DE MAKER VAN DEZE WEBSITE HEEFT GEEN RECHTEN OVER HET DFDS-LOGO. DEZE WEBSITE IS PUUR VOOR EEN OPLEIDING GEMAAKT EN HEEFT GEEN COMMERCIËLE DOELEINDEN.
+      </p>
+</footer>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+</html>

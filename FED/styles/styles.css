@@ -1,0 +1,613 @@
+@keyframes donkermaakding {
+    0%   {background-color:#eff0f1; left:0px; top:0px;}  
+    100% {background-color:#494c52; left:0px; top:0px;}
+}
+
+@keyframes achtergrondswitcher{
+	0% {background-image: url(anima/animapreviewschuin.png);}
+	50%{background-color: rgba(255,255,255,0.5);}
+	100%{background-image: url(vrijdag/vrijdagtablet.png);}
+}
+
+@font-face {
+    	font-family: dfds-bold;
+    	src: url(dfds-bold.woff);
+}
+
+@font-face {
+	font-family: dfds-light;
+	src: url(dfds-light.woff);
+}
+
+
+
+
+body {
+	background-color: #eff0f1;
+	/*background: linear-gradient(black, grey);*/
+	font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1em;
+	box-sizing: border-box;
+	/*overflow-x: hidden;*/
+}
+
+
+button {
+	background-color: black;
+	display: inline-block;
+	border: none;
+	color: white;
+	font-family: dfds-bold, "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.3em;
+}
+button:hover {
+	background-color: #F58520;
+}
+
+#randombutton {
+	display: none;
+	flex-direction: row;
+	align-items: center;
+	background-color: #F58520;
+	font-size: 1em;
+}
+button > img {
+	height: 1.4em;
+}
+
+article > button {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+#pijltjerechts {
+	background-color: transparent;
+	color: white;
+	font-weight: bold;
+	font-size: 2em;
+	position: absolute;
+	right: 2em;
+	top: 50%;
+	display: none;
+}
+#pijltjelinks{
+	background-color: transparent;
+	color: white;
+	font-weight: bold;
+	font-size: 2em;
+	position: absolute;
+	left: 2em;
+	top: 50%;
+	display: none;
+}
+
+h1 {
+	font-family: dfds-bold, "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	color: #6d7071;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-left: 1em;
+	grid-area: titel;
+}
+
+h2{
+	font-family: dfds-bold,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.5em;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	padding: 1em 0 0.2em 1em;
+	margin-top: 0;
+	background-color: white;
+}
+
+
+h3{
+	font-family: dfds-bold,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.2em;
+	text-decoration: none;
+	color: white;
+	/*background-color: rgba(255, 255, 255,1);*/
+	padding: 0 1em 0 1em;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
+#uitgelichtcontainer>article>header>h3{
+	color: black;
+}
+h4{
+	font-family: dfds-light,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.17em;
+	text-decoration: none;
+	color: white;
+}
+
+h5 {
+	display: none;
+}
+
+p  {
+	text-decoration: none;
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 1.5em;
+	padding: 1em 2em;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ol>li > a {
+	font-family: dfds-bold,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.2em;
+	text-decoration: none;
+	color: black;
+	line-height: 1.6;
+	padding-left: 1em;
+}
+
+ol>li>button{
+	float: right;
+	margin: 0 1em 0 2em;
+}
+article {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+article>p>img {
+	padding: 0 0.6em 0 0.6em;
+
+	
+}
+p:first-of-type{
+
+}
+/*------------------------------------------UITZONDERINGEN----------------------------------------------*/
+.donkerbody {
+	animation-name: donkermaakding;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+}
+
+/* -------------------------------------GRID --------------------------------------------------------------*/
+main {
+
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-row-gap: 2em;
+	align-items: stretch;
+	grid-template-areas: 
+	"ug ug ug ug"
+	"koptwee koptwee koptwee koptwee"
+	"filtersorteer filtersorteer filtersorteer filtersorteer"
+	"resultaten resultaten resultaten resultaten"
+	"resultaten resultaten resultaten resultaten"
+	"resultaten resultaten resultaten resultaten"
+	"resultaten resultaten resultaten resultaten";
+}
+
+/* ----------------------------------NAVIGATIE -----------------------------------------------------------------*/
+nav {
+	background-color: white;
+	margin-bottom: 2em;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+	display: grid;
+	grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 37.5%;
+	align-items: center;
+	grid-template-areas: 
+	"logo logo titel knoppen knoppen knoppen ";
+	padding: 2em 0 2em 0;
+}
+
+[role~="toolbar"]{
+	display: none;
+}
+[role~="toolbar"] > ul>li{
+	display: flex;
+	flex-wrap: nowrap;
+}
+[role~="toolbar"] > ul>li:hover{
+	 text-decoration: underline;
+}
+[role~="toolbar"] > ul > li > img {
+	height: 1.2em;
+	padding-left: 1em;
+}
+
+nav > button > img , #menuicoon {
+	position: absolute;
+	top: 0.6em;
+	right: 0.6em;
+	background-color: transparent;
+	max-height: 1.6em;
+	grid-area: knoppen; 
+}
+
+nav > a {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: 2em;
+}
+/*-----------------------------------POPULAIR-----------------------------------------------------------*/
+#populair {
+	display: none;
+	grid-area: populair;
+	margin: 0 auto 0 2em;
+}
+
+
+/* ----------------------------------UITGELICHT----------------------------------------------------------*/
+.uitgelicht {
+	grid-area: ug;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	background-image:url("anima/animapreviewschuin.png");
+	position: relative;
+	background-size: 100% 100%;
+}
+#uitgelichtheader {
+	transition: background-color 0.4s ease-in-out 0s;
+	-webkit-transition: background-color 0.4s ease-in-out 0s;
+}
+
+
+main > section > div {
+	display: flex;
+	background-color: white;
+	width: 14em;
+	margin:auto;
+}
+
+ article > header {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 0 0 0.4em;
+}
+
+article>a{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.uitgelichtverhaal > header {
+	flex-wrap: nowrap;
+}
+
+.oranje{
+	background-color: #f58520;
+}
+
+/*-----------------------------------VINDVERHAAL---------------------------------------------------------*/
+#vindverhaal {
+	grid-area: koptwee;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
+	padding-bottom: 0.4em;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+#zoekwrapper {
+	display: flex;
+	align-items: center;
+	padding:0.6em 1em 0.4em 1em;
+}
+[type~="text"]{
+	border: solid 0.063em #d3d4d4;
+	border-radius: 0.188em;
+	padding: 0.02em 0.1em 0.02em 0.1em;
+	background-color: white;
+	font-size: 1.2em;
+}
+#zoekicoon {
+	height: 1.1em;
+	position: relative;
+	right: 1.5em;
+}
+
+#zoekbalk {
+	width: 80%;
+	-webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    padding:0.2em;
+}
+
+#zoekbalk:focus{
+	width: 100%;
+
+}
+
+/*-----------------------------------FILTERSORTEER-------------------------------------------------------*/
+form {
+	grid-area: filtersorteer;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding:0;
+	margin: auto;
+}
+
+select {
+
+    font-family: dfds-bold,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    background-color: #012b45;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.2em 0.8em 0.2em 1em;
+    flex-grow: 1;
+    font-size: 1.1em;
+    width: 100%;
+}
+/*-----------------------------------RESULTATEN---------------------------------------------------------*/
+#resultaten {
+	grid-area: resultaten;
+	margin: auto;
+	display: block;
+}
+
+main>div>article {
+	background-color: white;
+	margin: 2em 0 2em 0;
+	max-width: 30em;
+}
+
+#animaheading {
+	display: flex;
+    background-image: url(anima/animaicoon2.png);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+
+}
+#onomatopeeheading {
+    background-image: url(onomatopee/onomatopeeicoon2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#vrijdagdedertiendeheader {
+    background-image: url(vrijdag/vrijdagdedertiendeicoon2.png);
+   background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+div > article> header {
+	flex-wrap: wrap;
+}
+p > img {
+	height: 1.4em;
+}
+
+article> header> p {
+	display: flex;
+	padding: 0.6em 0.6em 0.6em 2em;
+	order: 2;
+
+}
+article>header>button {
+	order: 1;
+	background-color: transparent;
+	color: black;
+	padding-right: 0.6em;
+	font-size: 2.6em;
+	font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	
+}
+
+#resultaten > article > header> button {
+	color: white;
+}
+#resultaten > article > header> button:hover {
+	color: black;
+}
+
+article > header > p > img {
+	padding: 0.2em 0.6em 0.2em 0.6em;
+}
+/* ----------------------------------AFBEELDINGEN -------------------------------------------------------*/
+[alt~="logo"] {
+	height: 2.6em;
+    display: flex;
+    grid-area: logo;
+	padding: 0.6em 0 0.6em 0;
+}
+
+/*---------------------------------------FOOTER------------------------------------------------------------*/
+
+footer {
+	font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	color: #b2cbd9;
+	background-color: #012b45;
+	padding: 2em;
+	margin-top: 2em;
+}
+
+/*----------------------------------------MICRO-INTERACTIES----------------------------------------------------*/
+/*.donkerbody , h1, h2, h3, h4, h5, h6, p, header, a, nav, #resultaten, main {
+	background-color: #3c3e3f;
+	color: white;
+}
+*/
+
+/*------------------------------------------MEDIA QUERIES------------------------------------------------------*/
+
+
+
+
+
+
+@media (min-width:22em)  {
+	article> header> p {
+		order: 1;
+	}
+
+	article>header>button {
+		order: 2;
+	}
+}
+
+
+@media (min-width:30em)  { 
+	nav > a {
+		flex-wrap: nowrap;
+	}
+	
+	#uitgelichtcontainer {
+    	display: flex;
+    	background-color: white;
+    	width: 22em;
+    	margin: auto;
+	}
+	
+	#vindverhaal {
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+
+	form {
+		flex-wrap: nowrap;
+	}
+	
+
+	select {
+	    font-family: dfds-bold,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	    background-color: #012b45;
+	    color: white;
+	    text-transform: uppercase;
+	    padding: 0.2em 0.8em 0.2em 1em;
+	    flex-grow: 1;
+	}
+	
+	h3 {
+		min-width: 7em;
+	}
+	main>div>article {
+		background-color: white;
+		margin: 2em;
+	}
+
+	div > article > header {
+	    flex-wrap: nowrap;
+	}
+
+	article > header > p {
+		padding-top: 1.4em;
+	}
+ }
+
+
+
+@media (min-width:40em)  { 
+
+	#pijltjerechts, #pijltjelinks {
+		display: block;
+	}
+	.nieuwverhaal{
+		background-size: cover;
+		animation-name: achtergrondswitcher;
+    	animation-duration: 1s;
+    	animation-fill-mode: both;
+    	animation-timing-function: ease-in-out;
+	}
+
+	div > article {
+		flex-grow: 0;
+	}
+
+}
+
+@media (min-width:50em)  { 
+	
+
+	.uitgelicht {
+	margin:auto;		
+	width: 80%;
+	}
+
+	#menuicoon {
+	display: none;
+}
+
+	[role~="toolbar"]{
+	display: flex;
+	grid-area: knoppen;
+}
+
+
+	nav > div > button {
+	color: #6D6F71;
+	background-color: transparent;
+	margin-right: 6em;
+}
+
+nav>div>ul{
+	display: flex;
+	font-family: dfds-light,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.17em;
+	text-decoration: none;
+	list-style-type: none;
+	background-color: transparent;
+}
+
+nav>div>ul>li{
+	margin-right: 2em;
+}
+
+ul>li>a>img {
+	height: 1.2em;
+	padding-left: 1em;
+}
+
+
+form {
+	width: 80%;
+}
+
+
+@media (min-width:60em)  { }
+
+
+
+
+@media (min-width:77.5em) { 
+#randombutton {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #F58520;
+	font-size: 1em;
+
+}
+
+
+main {
+		grid-template-areas: 
+	"populair ug ug ug"
+	"koptwee koptwee koptwee koptwee"
+	"filtersorteer filtersorteer filtersorteer filtersorteer"
+	"resultaten resultaten resultaten resultaten"
+	"resultaten resultaten resultaten resultaten"
+	"resultaten resultaten resultaten resultaten"
+	"resultaten resultaten resultaten resultaten";
+}
+	#populair{
+		display: flex;
+		flex-wrap: wrap;
+		background-image: url("gradient1.png");
+		grid-area: populair;
+	}
+	#populair > h2 {
+		width: 100%;
+	}
+
+
+#resultaten{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}	 
+}
+
+
+
+@media (min-width:80em) {  }

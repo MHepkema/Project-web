@@ -1,0 +1,435 @@
+@font-face {
+    	font-family: dfds-bold;
+    	src: url(dfds-bold.woff);
+}
+
+@font-face {
+	font-family: dfds-light;
+	src: url(dfds-light.woff);
+}
+
+
+
+
+body {
+	background-color: #eff0f1;
+	/*background: linear-gradient(black, grey);*/
+	font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1em;
+	box-sizing: border-box;
+	/*overflow-x: hidden;*/
+}
+
+
+button {
+	background-color: black;
+	display: inline-block;
+	border: none;
+	color: white;
+	font-family: dfds-bold, "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.3em;
+}
+button:hover {
+	background-color: #F58520;
+}
+
+#randombutton {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #F58520;
+	font-size: 1em;
+}
+button > img {
+	height: 1.4em;
+}
+
+article > button {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+
+h1 {
+	font-family: dfds-bold, "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	color: #6d7071;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-left: 1em;
+	grid-area: titel;
+}
+
+h2{
+	font-family: dfds-bold,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.5em;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	padding: 1em 0 0.2em 1em;
+	margin-top: 0;
+	background-color: white;
+}
+
+
+h3{
+	font-family: dfds-bold,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.2em;
+	text-decoration: none;
+	color: white;
+	/*background-color: rgba(255, 255, 255,1);*/
+	padding: 0 1em 0 1em;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
+#uitgelichtcontainer>article>header>h3{
+	color: black;
+}
+h4{
+	font-family: dfds-light,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.17em;
+	text-decoration: none;
+	color: white;
+}
+
+h5 {
+	display: none;
+}
+
+p  {
+	text-decoration: none;
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 1.5em;
+	padding: 1em 2em;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ol>li > a {
+	font-family: dfds-bold,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.2em;
+	text-decoration: none;
+	color: black;
+	line-height: 1.6;
+	padding-left: 1em;
+}
+
+ol>li>button{
+	float: right;
+	margin: 0 1em 0 2em;
+}
+article {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+article>p>img {
+	padding: 0 0.6em 0 0.6em;
+
+	
+}
+p:first-of-type{
+
+}
+/*------------------------------------------UITZONDERINGEN----------------------------------------------*/
+.donkerbody {
+	background-color: #444A51;
+}
+
+/* -------------------------------------GRID --------------------------------------------------------------*/
+main {
+
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-row-gap: 2em;
+	align-items: stretch;
+	grid-template-areas: 
+	"intro intro intro intro"
+	"form form form form"
+	;
+}
+
+/* ----------------------------------NAVIGATIE -----------------------------------------------------------------*/
+nav {
+	background-color: white;
+	margin-bottom: 2em;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+	display: grid;
+	grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 37.5%;
+	align-items: center;
+	grid-template-areas: 
+	"logo logo titel titel knoppen knoppen ";
+	padding: 2em 0 2em 0;
+}
+
+[role~="toolbar"]{
+	display: none;
+}
+
+nav > button > img , #menuicoon {
+	position: absolute;
+	top: 0.6em;
+	right: 0.6em;
+	background-color: transparent;
+	max-height: 1.6em;
+	grid-area: knoppen; 
+}
+
+nav > a {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: 2em;
+}
+/*-----------------------------------POPULAIR-----------------------------------------------------------*/
+#populair {
+	display: none;
+	grid-area: populair;
+	margin: 0 auto 0 2em;
+}
+
+
+/* ----------------------------------INTRODUCTIE----------------------------------------------------------*/
+#introductie {
+
+	grid-area: intro;
+	background-image: url('inloggen/grotebootklein.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+main>section>p{
+	background-color: white;
+	margin:1em;
+	padding: 1.6em;
+}
+
+
+
+/*-----------------------------------FORMULIER---------------------------------------------------------*/
+
+section:nth-child(2){
+	grid-area: form;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	background-color: transparent;
+}
+form{
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+legend, label, input {
+		font-size: 1.2em;
+		display: inline-block;
+		width: 100%;
+
+	}
+section:nth-child(2)>h2{
+	padding: 1em 1.6em 0.4em 1em;
+}
+legend {
+	font-family: dfds-bold,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+}
+label {
+	margin: 1em 0 0.4em 0;
+	display: inline-block;
+	width: 100%;
+	min-width: 12em;
+}
+input[type=text], input[type=password], input[type=email]{
+	width: 90%;
+	display: inline-block;
+	padding: 0.4em;
+	margin: auto;
+}
+
+select {
+	 font-family: dfds-bold,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    background-color: #012b45;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.2em 0.8em 0.2em 1em;
+    flex-grow: 1;
+    font-size: 1.1em;
+    width: 100%;
+    margin-top: 2em;
+}
+section:nth-child(2)>form>button{
+	margin:1em 2em;
+	padding: 0.4em;
+}
+/* ----------------------------------AFBEELDINGEN -------------------------------------------------------*/
+[alt~="logo"] {
+	height: 2.6em;
+    display: flex;
+    grid-area: logo;
+	padding: 0.6em 0 0.6em 0;
+}
+
+/*---------------------------------------FOOTER------------------------------------------------------------*/
+
+footer {
+	font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	color: #b2cbd9;
+	background-color: #012b45;
+	padding: 2em;
+	margin-top: 2em;
+}
+
+/*----------------------------------------MICRO-INTERACTIES----------------------------------------------------*/
+/*.donkerbody , h1, h2, h3, h4, h5, h6, p, header, a, nav, #resultaten, main {
+	background-color: #3c3e3f;
+	color: white;
+}
+*/
+
+/*------------------------------------------MEDIA QUERIES------------------------------------------------------*/
+
+
+
+
+
+
+@media (min-width:22em)  {
+	article> header> p {
+		order: 1;
+	}
+
+	article>header>button {
+		order: 2;
+	}
+}
+
+
+@media (min-width:30em)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+	nav > a {
+		flex-wrap: nowrap;
+}
+	#introductie {
+
+	grid-area: intro;
+	background-image: url('inloggen/grotebootmiddel.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+	main>section>p{
+	margin:1em 8em 1em 4em;
+}
+
+	form {
+		flex-wrap: nowrap;
+	}
+	
+	
+
+	select {
+	    font-family: dfds-bold,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	    background-color: #012b45;
+	    color: white;
+	    text-transform: uppercase;
+	    padding: 0.2em 0.8em 0.2em 1em;
+	    flex-grow: 1;
+	}
+	
+	h3 {
+		min-width: 7em;
+	}
+ }
+
+
+
+@media (min-width:40em)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+
+
+		main>section>p{
+	margin:1em 14em 1em 4em;
+}
+
+	div > article {
+		flex-grow: 0;
+	}
+
+}
+
+@media (min-width:50em)  { 
+	
+	#menuicoon {
+	display: none;
+}
+
+	[role~="toolbar"]{
+	display: flex;
+	grid-area: knoppen;
+}
+
+
+	nav > div > button {
+	color: #6D6F71;
+	background-color: transparent;
+	margin-right: 6em;
+}
+
+nav>div>ul{
+	display: flex;
+	font-family: dfds-light,"Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.17em;
+	text-decoration: none;
+	list-style-type: none;
+	background-color: transparent;
+}
+
+nav>div>ul>li{
+	margin-right: 2em;
+}
+
+ul>li>a>img {
+	height: 1.2em;
+	padding-left: 1em;
+}
+#introductie {
+
+	grid-area: intro;
+	background-image: url('inloggen/grotebootgroot.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	max-width: 80%;
+	margin: auto;
+
+}
+
+form {
+	width: 80%;
+}
+fieldset{
+	padding-right: 2em;
+	padding-left: 2em;
+}
+
+
+
+@media (min-width:60em)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+
+form {
+	width: 40%;
+	margin: auto;
+}
+
+
+@media (min-width:77.5em) { 
+	#introductie {
+		min-height: 26em;
+	}
+	main>section>p{
+		margin:1em 40em 1em 4em;
+}
+	
+}
+
+
+
+@media (min-width:80em) { /* hi-res laptops and desktops */ }

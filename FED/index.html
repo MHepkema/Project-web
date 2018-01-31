@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/inlogstyles.css">
+    <title>Inloggen</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="overzicht.html">
+          <img src="styles/logo3dfds.png" alt="DFDS logo">
+          <img src="styles/logo3reisverhalen.png" alt="DFDS logo">
+          <!--<h1>reisverhalen</h1>-->
+        </a>
+        <div role="toolbar">
+          <ul>
+            <li><a href="">Info</a></li>
+            <li><a href="">DFDS website</a></li>
+          </ul>
+          <!--
+          <button>Collectie
+          <img src="styles/boekenkasticoon.png">
+          </button>
+          <button>Meldingen
+          <img src="styles/meldingenicoon.png">
+          </button>
+          <button>Profiel
+          <img src="styles/profielicoon.png">
+          </button>-->
+        </div>
+        <button id="menuicoon">
+        <img title="menu" src="styles/menuicoon.png">
+        </button>
+      </nav>
+    </header>
+    
+    
+    <main>
+      <section id="introductie" >
+        <h2>Laat u inspireren</h2>
+        <p>99 Unieke verhalen; kort lang, vreemd, interessant; wij hebben ze voor u klaar staan. Ideaal om tijd ontspannend en leerzaam mee door te brengen tijdens uw reis met DFDS.
+        Speciaal voor onze passagiers introduceren wij: DFDS Reisverhalen.</p>
+      </section>
+      
+      
+      <section>
+        <h2>Maak een account aan</h2>
+        <form>
+          <fieldset>
+            <legend>Persoonlijke info</legend>
+            <label for="voornaam">Voornaam</label>
+            <input id="voornaam" type="text" placeholder="Vul uw voornaam in" required> <!--https://html.com/attributes/input-pattern/-->
+            <label for="achternaam">Achternaam</label>
+            <input id="achternaam" type="text" placeholder="Vul uw achternaam in"  required>
+            <label for="leeftijd">Leeftijdsdfasdfasfadsfadsf</label>
+            <input id="leeftijd" type="text" placeholder="vul uw leeftijd in"  required>
+            <select>
+              <option value="geslacht">Geslacht</option>
+              <option value="man">Man</option>
+              <option value="vrouw">Vrouw</option>
+              <option value="anders">Apache helicopter</option>
+              <option value="anders">Anders</option>
+            </select>
+            <label for="voorkeur_geslacht">Geslacht niet weergeven op profiel</label>
+            <input type="checkbox" name="voorkeur_geslacht" id="voorkeur_geslacht" value="Geslacht niet weergeven op profiel" checked="checked">
+          </fieldset>
+          <fieldset>
+            <legend>Account</legend>
+            <label for="gebruikersnaam">Gebruikersnaam</label>
+            <input id="gebruikersnaam" type="text" placeholder="Vul gebruikersnaam in" required>
+            <label for="email">E-mailadres</label>
+            <input id="email" type="email" placeholder="voorbeeld@voorbeeld.vb"  required>
+            <label for="wachtwoord">Wachtwoord</label>
+            <input id="wachtwoord" type="password" placeholder="Minimaal 6 tekens"  pattern=".{6,}" required>
+          </fieldset>
+          <button type="submit">Log in en lees mee></button>
+          <p>Heeft u al een account? <a href="overzicht.html">Log in</a></p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <h4>Links</h4>
+      <ul>
+        <li><a>Over</a></li>
+        <li><a>DFDS website</a></li>
+      </ul>
+      <p>
+        DISCLAIMER: DEZE WEBSITE IS GEEN EIGENDOM VAN DFDS. DE MAKER VAN DEZE WEBSITE HEEFT GEEN RECHTEN OVER HET DFDS-LOGO. DEZE WEBSITE IS PUUR VOOR EEN OPLEIDING GEMAAKT EN HEEFT GEEN COMMERCIËLE DOELEINDEN.
+      </p>
+    </footer>
+  </body>
+</html>
